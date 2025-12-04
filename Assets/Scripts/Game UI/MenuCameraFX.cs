@@ -15,6 +15,7 @@ public class MenuCamera3DFX : MonoBehaviour
     private Vector3 startPos;
     private Quaternion startRot;
     private bool isShaking = false;
+    float totalRotation = 0f;
 
     void Start()
     {
@@ -45,7 +46,9 @@ public class MenuCamera3DFX : MonoBehaviour
 
             float elapsed = 0f;
             Quaternion initialRot = transform.rotation;
-            Quaternion targetRot = initialRot * Quaternion.Euler(0f, 360f, 0f);
+
+            totalRotation += 45f;
+            Quaternion targetRot = Quaternion.Euler(0f, totalRotation, 0f);
 
             while (elapsed < rotationDuration)
             {
