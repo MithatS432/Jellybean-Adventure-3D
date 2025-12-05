@@ -10,6 +10,7 @@ TagManager:
   - Blue
   - Yellow
   - Green
+  - Obstacle
   layers:
   - Default
   - TransparentFX
